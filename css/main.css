@@ -1,3 +1,6 @@
+/*************************************************
+        Reset
+**************************************************/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,7 +51,93 @@ table {
   border-spacing: 0;
 }
 
+/*************************************************
+        Variables
+**************************************************/
+/*************************************************
+        Page
+**************************************************/
 .page {
-  color: blue;
+  background: whitesmoke;
 }
+
+.page header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.page header nav ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  vertical-align: text-bottom;
+}
+
+.page header nav ul li {
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+  padding: 10px;
+}
+
+.page header .secondary-nav {
+  background: black;
+  color: gray;
+  font-size: .8em;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+}
+
+.page header .secondary-nav li:hover {
+  color: white;
+}
+
+.page header .secondary-nav li:nth-child(6) {
+  margin-right: auto;
+}
+
+.page header .main-nav {
+  background: white;
+  height: 50px;
+  color: gray;
+}
+
+.page header .main-nav li {
+  text-transform: uppercase;
+}
+
+.page header .main-nav li:hover {
+  color: black;
+}
+
+.page header .main-nav li:nth-of-type(5) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: auto;
+  border-right: 2px solid whitesmoke;
+}
+
+/*************************************************
+        Media Queries
+**************************************************/
 /*# sourceMappingURL=main.css.map */
