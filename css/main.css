@@ -146,6 +146,7 @@ table {
 
 .page section {
   margin: 20px;
+  margin-bottom: 100px;
 }
 
 .page .hero {
@@ -223,12 +224,101 @@ table {
   font-size: .8em;
 }
 
+.page .latest-deals {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-flow: row;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.page .latest-deals::before {
+  content: 'Latest deals >';
+  color: #ff4422;
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute;
+  left: 5px;
+  top: -50px;
+}
+
+.page .latest-deals .deal .img {
+  background: lightblue;
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+
+.page .latest-deals .deal h3 {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.page .latest-deals .deal h3:hover {
+  color: #ff4422;
+  text-decoration: underline;
+}
+
+.page .latest-deals .deal p {
+  color: gray;
+}
+
 .page footer {
   background: black;
-  color: white;
+  color: gray;
   width: 100%;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  text-align: center;
+}
+
+.page footer nav {
+  height: 75px;
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.page footer nav ul li {
+  padding: 10px;
+  display: inline;
+}
+
+.page footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 75px;
+  font-size: .8em;
+}
+
+.page footer .copyright img {
+  height: 8px;
+}
+
+.page footer .copyright span {
+  color: red;
 }
 
 /*************************************************
@@ -274,6 +364,39 @@ table {
   .page .latest-news .article img {
     width: 75px;
     height: 75px;
+  }
+  .page .latest-deals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page .latest-deals .deal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .page .latest-deals .deal .img {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+  }
+  .page footer .copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .page footer .copyright li {
+    padding-bottom: 5px;
   }
 }
 /*# sourceMappingURL=main.css.map */
