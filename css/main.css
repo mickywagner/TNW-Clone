@@ -59,6 +59,13 @@ table {
 **************************************************/
 .page {
   background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .page header nav {
@@ -104,7 +111,7 @@ table {
   color: gray;
   font-size: .8em;
   font-family: Arial, Helvetica, sans-serif;
-  height: 30px;
+  height: 35px;
 }
 
 .page header .secondary-nav li:hover {
@@ -137,7 +144,50 @@ table {
   border-right: 2px solid whitesmoke;
 }
 
+.page .hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 66% 1fr;
+      grid-template-columns: 66% 1fr;
+  -ms-grid-rows: 2;
+      grid-template-rows: 2;
+  height: 500px;
+  margin-bottom: 75px;
+  background: yellow;
+}
+
+.page .hero .article {
+  margin: 10px;
+  background: pink;
+}
+
+.page .hero .article:first-of-type {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
 /*************************************************
         Media Queries
 **************************************************/
+@media only screen and (max-width: 768px) {
+  .page .secondary-nav {
+    display: none;
+  }
+  .page .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90vh;
+  }
+  .page .hero .article {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
 /*# sourceMappingURL=main.css.map */
