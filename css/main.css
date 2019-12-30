@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*************************************************
         Reset
 **************************************************/
@@ -66,6 +67,7 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .page header nav {
@@ -182,13 +184,19 @@ table {
 }
 
 .page .latest-news::before {
-  content: 'Latest news >';
+  content: "Latest \f105";
+  font-family: "Font Awesome 5 Free";
+  vertical-align: middle;
   color: #ff4422;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
   position: absolute;
   left: 5px;
   top: -50px;
+}
+
+.page .latest-news::before:hover {
+  color: black;
 }
 
 .page .latest-news .article {
@@ -222,6 +230,114 @@ table {
 .page .latest-news .article p {
   color: gray;
   font-size: .8em;
+}
+
+.page .category-articles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-auto-flow: row;
+  grid-gap: 20px;
+}
+
+.page .category-articles .category {
+  margin-bottom: 50px;
+}
+
+.page .category-articles .category h1 {
+  color: #ff4422;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.page .category-articles .category h1 span {
+  font-size: .6em;
+  vertical-align: middle;
+}
+
+.page .category-articles .category h1:hover {
+  color: black;
+}
+
+.page .category-articles .category .img {
+  height: 200px;
+  background: #7bd1a6;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+  color: white;
+}
+
+.page .category-articles .category .img h2 {
+  font-size: 1.25em;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.page .category-articles .category .img h2::before {
+  content: 'Most Popular';
+  position: absolute;
+  bottom: 115%;
+  text-transform: uppercase;
+  font-size: .7em;
+}
+
+.page .category-articles .category .img p {
+  color: gray;
+}
+
+.page .category-articles .category .latest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fadbdb;
+}
+
+.page .category-articles .category .latest h2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #ff4422;
+  padding: 10px;
+  position: relative;
+}
+
+.page .category-articles .category .latest h2::before {
+  content: 'Latest';
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 90%;
+  font-size: .7em;
+}
+
+.page .category-articles .category .latest img {
+  width: 75px;
+  height: 75px;
+}
+
+.page .category-articles .category li {
+  border-bottom: 1px solid gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+.page .category-articles .category li::before {
+  content: '•';
+  color: #ff4422;
+  display: inline-block;
+  width: 1em;
 }
 
 .page .latest-deals {
@@ -278,7 +394,7 @@ table {
 
 .page footer nav {
   height: 75px;
-  background: #313131;
+  background: #141414;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
