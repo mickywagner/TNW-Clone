@@ -2,19 +2,87 @@
 /*************************************************
         Reset
 **************************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -146,12 +227,12 @@ table {
   border-right: 2px solid whitesmoke;
 }
 
-.page section {
+section {
   margin: 20px;
   margin-bottom: 100px;
 }
 
-.page .hero {
+.hero {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 66% 1fr;
@@ -160,21 +241,20 @@ table {
       grid-template-rows: 2;
   height: 500px;
   margin: 5px 5px 75px 5px;
-  background: yellow;
 }
 
-.page .hero .article {
+.hero .article {
   margin: 5px;
   background: pink;
 }
 
-.page .hero .article:first-of-type {
+.hero .article:first-of-type {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
 }
 
-.page .latest-news {
+.latest-news {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(260px, 1fr))[auto-fill];
@@ -183,7 +263,7 @@ table {
   position: relative;
 }
 
-.page .latest-news::before {
+.latest-news::before {
   content: "Latest \f105";
   font-family: "Font Awesome 5 Free";
   vertical-align: middle;
@@ -195,11 +275,11 @@ table {
   top: -50px;
 }
 
-.page .latest-news::before:hover {
+.latest-news::before:hover {
   color: black;
 }
 
-.page .latest-news .article {
+.latest-news .article {
   margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,28 +291,85 @@ table {
   margin-bottom: 20px;
 }
 
-.page .latest-news .article img {
+.latest-news .article img {
   width: 100%;
 }
 
-.page .latest-news .article h3 {
+.latest-news .article h3 {
   font-weight: bold;
   font-size: 1em;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.page .latest-news .article h3:hover {
+.latest-news .article h3:hover {
   color: #ff4422;
   text-decoration: underline;
 }
 
-.page .latest-news .article p {
+.latest-news .article p {
   color: gray;
   font-size: .8em;
 }
 
-.page .category-articles {
+.latest-funding {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  grid-gap: 20px;
+  color: #ff4422;
+}
+
+.latest-funding h1 {
+  grid-column: 1 / -1;
+}
+
+.latest-funding .fund {
+  background: floralwhite;
+  margin-bottom: 20px;
+}
+
+.latest-funding .fund h1 {
+  background: #ff4422;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+.latest-funding .fund h2 {
+  background: mistyrose;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.latest-funding .fund h2 span {
+  display: block;
+  font-size: .7em;
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: slategray;
+}
+
+.latest-funding .fund i {
+  color: black;
+}
+
+.latest-funding .fund p {
+  font-size: .8em;
+  font-weight: 100;
+  color: slategray;
+  padding: 15px;
+}
+
+.latest-funding .fund p:last-of-type {
+  border-top: 1px solid mistyrose;
+}
+
+.category-articles {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(360px, 1fr))[auto-fill];
@@ -241,27 +378,27 @@ table {
   grid-gap: 20px;
 }
 
-.page .category-articles .category {
+.category-articles .category {
   margin-bottom: 50px;
 }
 
-.page .category-articles .category h1 {
+.category-articles .category h1 {
   color: #ff4422;
   font-size: 2em;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.page .category-articles .category h1 span {
+.category-articles .category h1 span {
   font-size: .6em;
   vertical-align: middle;
 }
 
-.page .category-articles .category h1:hover {
+.category-articles .category h1:hover {
   color: black;
 }
 
-.page .category-articles .category .img {
+.category-articles .category .img {
   height: 200px;
   background: #7bd1a6;
   margin-bottom: 2px;
@@ -279,13 +416,13 @@ table {
   color: white;
 }
 
-.page .category-articles .category .img h2 {
+.category-articles .category .img h2 {
   font-size: 1.25em;
   margin-bottom: 5px;
   position: relative;
 }
 
-.page .category-articles .category .img h2::before {
+.category-articles .category .img h2::before {
   content: 'Most Popular';
   position: absolute;
   bottom: 115%;
@@ -293,18 +430,18 @@ table {
   font-size: .7em;
 }
 
-.page .category-articles .category .img p {
+.category-articles .category .img p {
   color: gray;
 }
 
-.page .category-articles .category .latest {
+.category-articles .category .latest {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #fadbdb;
 }
 
-.page .category-articles .category .latest h2 {
+.category-articles .category .latest h2 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: #ff4422;
@@ -312,7 +449,7 @@ table {
   position: relative;
 }
 
-.page .category-articles .category .latest h2::before {
+.category-articles .category .latest h2::before {
   content: 'Latest';
   text-transform: uppercase;
   position: absolute;
@@ -320,12 +457,12 @@ table {
   font-size: .7em;
 }
 
-.page .category-articles .category .latest img {
+.category-articles .category .latest img {
   width: 75px;
   height: 75px;
 }
 
-.page .category-articles .category li {
+.category-articles .category li {
   border-bottom: 1px solid gray;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,14 +470,14 @@ table {
   padding: 10px 0;
 }
 
-.page .category-articles .category li::before {
+.category-articles .category li::before {
   content: '•';
   color: #ff4422;
   display: inline-block;
   width: 1em;
 }
 
-.page .latest-deals {
+.latest-deals {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(220px, 1fr))[auto-fill];
@@ -351,7 +488,7 @@ table {
   position: relative;
 }
 
-.page .latest-deals::before {
+.latest-deals::before {
   content: 'Latest deals >';
   color: #ff4422;
   font-size: 2.5em;
@@ -361,29 +498,29 @@ table {
   top: -50px;
 }
 
-.page .latest-deals .deal .img {
+.latest-deals .deal .img {
   background: lightblue;
   width: 100%;
   height: 185px;
   margin-bottom: 20px;
 }
 
-.page .latest-deals .deal h3 {
+.latest-deals .deal h3 {
   font-weight: bold;
   font-size: 1em;
   margin-bottom: 10px;
 }
 
-.page .latest-deals .deal h3:hover {
+.latest-deals .deal h3:hover {
   color: #ff4422;
   text-decoration: underline;
 }
 
-.page .latest-deals .deal p {
+.latest-deals .deal p {
   color: gray;
 }
 
-.page footer {
+footer {
   background: black;
   color: gray;
   width: 100%;
@@ -392,7 +529,7 @@ table {
   text-align: center;
 }
 
-.page footer nav {
+footer nav {
   height: 75px;
   background: #141414;
   display: -webkit-box;
@@ -410,12 +547,12 @@ table {
   font-size: .8em;
 }
 
-.page footer nav ul li {
+footer nav ul li {
   padding: 10px;
   display: inline;
 }
 
-.page footer .copyright {
+footer .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,11 +566,11 @@ table {
   font-size: .8em;
 }
 
-.page footer .copyright img {
+footer .copyright img {
   height: 8px;
 }
 
-.page footer .copyright span {
+footer .copyright span {
   color: red;
 }
 
@@ -441,10 +578,10 @@ table {
         Media Queries
 **************************************************/
 @media only screen and (max-width: 768px) {
-  .page .secondary-nav {
+  .secondary-nav {
     display: none;
   }
-  .page .hero {
+  .hero {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -454,12 +591,12 @@ table {
             flex-direction: column;
     height: 90vh;
   }
-  .page .hero .article {
+  .hero .article {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
-  .page .latest-news {
+  .latest-news {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -468,7 +605,7 @@ table {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .page .latest-news .article {
+  .latest-news .article {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -477,11 +614,11 @@ table {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .page .latest-news .article img {
+  .latest-news .article img {
     width: 75px;
     height: 75px;
   }
-  .page .latest-deals {
+  .latest-funding {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -490,7 +627,19 @@ table {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .page .latest-deals .deal {
+  .latest-funding .fund:last-of-type {
+    display: none;
+  }
+  .latest-deals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latest-deals .deal {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -500,18 +649,18 @@ table {
             flex-direction: row;
     margin-bottom: 10px;
   }
-  .page .latest-deals .deal .img {
+  .latest-deals .deal .img {
     width: 75px;
     height: 75px;
     padding: 0;
   }
-  .page footer .copyright {
+  footer .copyright {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
   }
-  .page footer .copyright li {
+  footer .copyright li {
     padding-bottom: 5px;
   }
 }
