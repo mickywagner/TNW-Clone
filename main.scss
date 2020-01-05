@@ -221,7 +221,7 @@ $red: rgb(255, 68, 34);
 section {
     margin: 20px 30px 50px 30px;
     margin-bottom: 50px;
-    
+
     // really large screen left and right 50px
 }
 
@@ -301,21 +301,21 @@ section {
 }
 
 .latest-funding {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-rows: 1fr auto;
-   grid-gap: 20px;
-   color: $red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 20px;
+    color: $red;
 
-   h1 {
-       grid-column: 1 / -1 ;
-   }
+    h1 {
+        grid-column: 1 / -1;
+    }
 
 
-   .fund {
+    .fund {
         background: floralwhite;
         margin-bottom: 20px;
-        
+
         h1 {
             background: $red;
             color: white;
@@ -351,9 +351,9 @@ section {
 
         p:last-of-type {
             border-top: 1px solid mistyrose;
-           
+
         }
-   }
+    }
 
 }
 
@@ -386,8 +386,8 @@ section {
 
 
         .img {
-            height: 200px;
-            background: rgb(123, 209, 166);
+            min-height: 275px;
+            background: black;
             margin-bottom: 2px;
             display: flex;
             flex-direction: column;
@@ -398,7 +398,8 @@ section {
             h2 {
                 font-size: 1.25em;
                 margin-bottom: 5px;
-                position: relative;
+                font-weight: 600;
+
 
                 &::before {
                     content: 'Most Popular';
@@ -410,39 +411,47 @@ section {
             }
 
             p {
-                color: gray;
+                color: rgb(185, 189, 192);
+                font-size: .8em;
             }
         }
 
         .latest {
             display: flex;
             background: rgb(250, 219, 219);
+            height: 75px;
+            position: relative;
 
             h2 {
                 align-self: flex-end;
                 color: $red;
+                font-weight: 600;
                 padding: 10px;
+                width: 75%;
                 position: relative;
 
                 &::before {
                     content: 'Latest';
                     text-transform: uppercase;
                     position: absolute;
-                    bottom: 90%;
+                    bottom: 100%;
                     font-size: .7em;
+                    font-weight: 200;
                 }
             }
 
             img {
                 width: 75px;
                 height: 75px;
-
+                position: absolute;
+                right: 0;
             }
 
         }
 
         li {
             border-bottom: 1px solid gray;
+            font-size: .8em;
             display: flex;
             padding: 10px 0;
 
@@ -472,7 +481,7 @@ section {
         font-size: 1.75em;
         font-weight: bold;
         position: relative;
-       
+
 
         h1:hover {
             color: black;
@@ -492,7 +501,7 @@ section {
         }
     }
 
-    
+
 
     .deal {
         .img {
@@ -540,7 +549,7 @@ images
 .latest-deals .deal {
     .img-1 {
         background: url("https://cdnp2.stackassets.com/368a30b8a6bfe1b25934fa98a31713182d866051/store/opt/720/541/e95bae63c8d785f34e151aba3b85f06c480197eb23892229831867952fdd/product_30218_product_shots4.jpg");
-        
+
     }
 
     .img-2 {
@@ -576,6 +585,69 @@ images
         background-position: center;
     }
 }
+
+.category-articles .category {
+    .img-1 {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/TNW2019-796x418.png")
+    }
+
+    .img-2 {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F01%2FSnag_291393cb.png&signature=76313689ea06cb65768424336b7b7960")
+    }
+
+    .img-3 {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png")
+    }
+
+    .img-4 {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-5-796x417.png")
+    }
+
+    .img-6 {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F09%2Fzcash.jpg&signature=5d958ea4f1813449dd9f064bc2c9f017")
+    }
+
+    .img-7 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Amazon-Prime-Fresh-delivery-hed-796x419.jpg")
+    }
+
+    .img-8 {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-8-796x417.png");
+    }
+
+    .img {
+        background-size: cover;
+        background-position: center;
+    }
+
+
+}
+
+
+
+/* 
+==============================================================
+Footer
+==============================================================
+*/
 
 
 
@@ -635,80 +707,93 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
-        .secondary-nav {
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section {
+        margin: 20px 15px 30px 15px;
+    }
+
+    .secondary-nav {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+
+        .article {
+            flex: 1;
+        }
+    }
+
+    .latest-news {
+        display: flex;
+        flex-direction: column;
+
+        .article {
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 75px;
+                height: 75px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .latest-funding {
+        display: flex;
+        flex-direction: column;
+
+        .fund:last-of-type {
             display: none;
         }
+    }
 
-        .hero {
+    .category .img {
+        height: 350px;
+    }
+
+
+    .latest-deals {
+        display: flex;
+        flex-direction: column;
+
+        .deal {
             display: flex;
-            flex-direction: column;
-            height: 90vh;
+            flex-direction: row;
+            margin-bottom: 10px;
 
-            .article {
-                flex: 1;
+            .img {
+                min-width: 75px;
+                max-width: 75px;
+                height: 75px;
+                padding: 0;
+                margin-right: 15px;
+
             }
-        }
 
-        .latest-news {
-            display: flex;
-            flex-direction: column;
-
-            .article {
-                display: flex;
-                flex-direction: row;
-
-                img {
-                    width: 75px;
-                    height: 75px;
-                    margin-right: 5px;
-                }
-            }
-        }
-
-        .latest-funding {
-            display: flex;
-            flex-direction: column;
-
-            .fund:last-of-type {
-                display: none;
+            h3 {
+                padding-top: 5px;
             }
         }
 
 
-        .latest-deals {
-            display: flex;
-            flex-direction: column;
+    }
 
-            .deal {
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 10px;
+    footer {
+        .copyright {
+            flex-flow: column;
 
-                .img {
-                    min-width: 75px;
-                    max-width: 75px;
-                    height: 75px;
-                    padding: 0;
-                    margin-right: 15px;
-                    
-                }
-
-                h3 {
-                    padding-top: 5px;
-                }
-            }
-
-            
-        }
-
-        footer {
-            .copyright {
-                flex-flow: column;
-
-                li {
-                    padding-bottom: 5px;
-                }
+            li {
+                padding-bottom: 5px;
             }
         }
+    }
 
 }

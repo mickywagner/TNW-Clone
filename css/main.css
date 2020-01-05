@@ -399,8 +399,8 @@ section {
 }
 
 .category-articles .category .img {
-  height: 200px;
-  background: #7bd1a6;
+  min-height: 275px;
+  background: black;
   margin-bottom: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,7 +419,7 @@ section {
 .category-articles .category .img h2 {
   font-size: 1.25em;
   margin-bottom: 5px;
-  position: relative;
+  font-weight: 600;
 }
 
 .category-articles .category .img h2::before {
@@ -431,7 +431,8 @@ section {
 }
 
 .category-articles .category .img p {
-  color: gray;
+  color: #b9bdc0;
+  font-size: .8em;
 }
 
 .category-articles .category .latest {
@@ -439,13 +440,17 @@ section {
   display: -ms-flexbox;
   display: flex;
   background: #fadbdb;
+  height: 75px;
+  position: relative;
 }
 
 .category-articles .category .latest h2 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: #ff4422;
+  font-weight: 600;
   padding: 10px;
+  width: 75%;
   position: relative;
 }
 
@@ -453,17 +458,21 @@ section {
   content: 'Latest';
   text-transform: uppercase;
   position: absolute;
-  bottom: 90%;
+  bottom: 100%;
   font-size: .7em;
+  font-weight: 200;
 }
 
 .category-articles .category .latest img {
   width: 75px;
   height: 75px;
+  position: absolute;
+  right: 0;
 }
 
 .category-articles .category li {
   border-bottom: 1px solid gray;
+  font-size: .8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -586,6 +595,51 @@ images
   background-position: center;
 }
 
+.category-articles .category .img-1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/TNW2019-796x418.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/TNW2019-796x418.png");
+}
+
+.category-articles .category .img-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F01%2FSnag_291393cb.png&signature=76313689ea06cb65768424336b7b7960");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F01%2FSnag_291393cb.png&signature=76313689ea06cb65768424336b7b7960");
+}
+
+.category-articles .category .img-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+}
+
+.category-articles .category .img-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-5-796x417.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-5-796x417.png");
+}
+
+.category-articles .category .img-6 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F09%2Fzcash.jpg&signature=5d958ea4f1813449dd9f064bc2c9f017");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F09%2Fzcash.jpg&signature=5d958ea4f1813449dd9f064bc2c9f017");
+}
+
+.category-articles .category .img-7 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Amazon-Prime-Fresh-delivery-hed-796x419.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Amazon-Prime-Fresh-delivery-hed-796x419.jpg");
+}
+
+.category-articles .category .img-8 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-8-796x417.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-8-796x417.png");
+}
+
+.category-articles .category .img {
+  background-size: cover;
+  background-position: center;
+}
+
+/* 
+==============================================================
+Footer
+==============================================================
+*/
 footer {
   background: black;
   color: gray;
@@ -648,6 +702,12 @@ footer .copyright span {
         Media Queries
 **************************************************/
 @media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    margin: 20px 15px 30px 15px;
+  }
   .secondary-nav {
     display: none;
   }
@@ -700,6 +760,9 @@ footer .copyright span {
   }
   .latest-funding .fund:last-of-type {
     display: none;
+  }
+  .category .img {
+    height: 350px;
   }
   .latest-deals {
     display: -webkit-box;
