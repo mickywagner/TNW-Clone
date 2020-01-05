@@ -228,8 +228,8 @@ table {
 }
 
 section {
-  margin: 20px;
-  margin-bottom: 100px;
+  margin: 20px 30px 50px 30px;
+  margin-bottom: 50px;
 }
 
 .hero {
@@ -264,7 +264,7 @@ section {
 }
 
 .latest-news::before {
-  content: "Latest \f105";
+  content: "Latest news \f105";
   font-family: "Font Awesome 5 Free";
   vertical-align: middle;
   color: #ff4422;
@@ -379,14 +379,14 @@ section {
 }
 
 .category-articles .category {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .category-articles .category h1 {
   color: #ff4422;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .category-articles .category h1 span {
@@ -488,18 +488,32 @@ section {
   position: relative;
 }
 
-.latest-deals::before {
-  content: 'Latest deals >';
+.latest-deals header {
+  grid-column: 1 / -1;
   color: #ff4422;
-  font-size: 2.5em;
+  font-size: 1.75em;
   font-weight: bold;
+  position: relative;
+}
+
+.latest-deals header h1:hover {
+  color: black;
+}
+
+.latest-deals header:after {
+  content: "See all deals";
+  font-size: .5em;
+  font-weight: 100;
   position: absolute;
-  left: 5px;
-  top: -50px;
+  right: 5px;
+  bottom: 5px;
+}
+
+.latest-deals header:after:hover {
+  color: black;
 }
 
 .latest-deals .deal .img {
-  background: lightblue;
   width: 100%;
   height: 185px;
   margin-bottom: 20px;
@@ -518,6 +532,58 @@ section {
 
 .latest-deals .deal p {
   color: gray;
+  font-size: .9em;
+  text-decoration: line-through;
+}
+
+.latest-deals .deal p .price {
+  color: black;
+  font-size: 1.1em;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* 
+==============================================================
+images
+==============================================================
+*/
+.latest-deals .deal .img-1 {
+  background: url("https://cdnp2.stackassets.com/368a30b8a6bfe1b25934fa98a31713182d866051/store/opt/720/541/e95bae63c8d785f34e151aba3b85f06c480197eb23892229831867952fdd/product_30218_product_shots4.jpg");
+}
+
+.latest-deals .deal .img-2 {
+  background: url("https://cdnp3.stackassets.com/5dec52d25b16d55b111568dd5b77cf329c2f629a/store/opt/720/541/9dbdcadc39fb361d25946618177e14d55dbc4631cce6e47973333bb909b6/product_34144_product_shots1.jpg");
+}
+
+.latest-deals .deal .img-3 {
+  background: url("https://cdnp2.stackassets.com/43706c6cc7272726e7485f61b7402d505a1841d0/store/opt/720/541/de0e2cb69015d27b9762709bb2f8f984710268f22114ec9a59ba6697ffa8/product_34495_product_shots5.jpg");
+}
+
+.latest-deals .deal .img-4 {
+  background: url("https://cdnp2.stackassets.com/1e2d2cc466f762bd8106c7cd412e28c6a39122b8/store/opt/204/153/1e47681f01d8dc47069d0a633417ec2642290adc66e3a232bbdb910b7fdb/product_26600_product_shots1_image.jpg");
+}
+
+.latest-deals .deal .img-5 {
+  background: url("https://cdnp2.stackassets.com/780205c104adbd18fe93d52c56ba70e07caa588b/store/opt/50ed2347b4d5fbfdc30317d2631d474d60812a90faf1edf03dce32ff8444/product_27815_product_shot_wide.jpg");
+}
+
+.latest-deals .deal .img-6 {
+  background: url("https://cdnp3.stackassets.com/a85e4d26c3d8866fda151d94e48e2b444cca696e/store/opt/720/541/34a057679c5e22be4b1eb1b513f6cdb1853f397bd47abd81ed09403c9eb8/product_29657_product_shots1.jpg");
+}
+
+.latest-deals .deal .img-7 {
+  background: url("https://cdnp2.stackassets.com/f1cae7b5be786c30f86faec2b6622ef690895029/store/opt/720/541/fd6bbf06eaab39904b9614df79579affab5589e16155c7fe1c5ca7fef1a8/product_34038_product_shots1.jpg");
+}
+
+.latest-deals .deal .img-8 {
+  background: url("https://cdnp0.stackassets.com/283b8406f685217e74a0de3237c4c2134a91475e/store/opt/720/541/49be67773fe616527f09bccb525d3b688fb154773bb08fc1beacef19e96d/product_29440_product_shots1.jpg");
+}
+
+.latest-deals .deal .img {
+  background-size: cover;
+  background-position: center;
 }
 
 footer {
@@ -548,8 +614,12 @@ footer nav {
 }
 
 footer nav ul li {
-  padding: 10px;
   display: inline;
+  padding: 2px;
+}
+
+footer nav ul li:hover {
+  color: white;
 }
 
 footer .copyright {
@@ -617,6 +687,7 @@ footer .copyright span {
   .latest-news .article img {
     width: 75px;
     height: 75px;
+    margin-right: 5px;
   }
   .latest-funding {
     display: -webkit-box;
@@ -650,9 +721,14 @@ footer .copyright span {
     margin-bottom: 10px;
   }
   .latest-deals .deal .img {
-    width: 75px;
+    min-width: 75px;
+    max-width: 75px;
     height: 75px;
     padding: 0;
+    margin-right: 15px;
+  }
+  .latest-deals .deal h3 {
+    padding-top: 5px;
   }
   footer .copyright {
     -webkit-box-orient: vertical;
