@@ -147,76 +147,104 @@ $red: rgb(255, 68, 34);
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+}
 
-    header {
+header {
+    position: relative;
 
+    &:before {
+        content: " ";
+        position: absolute;
+        box-sizing: border-box;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        background:
+            url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg"),
+            linear-gradient(to bottom right,
+                rgb(210, 13, 141),
+                rgb(255, 67, 34));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%, 100%;
+    }
 
-        nav {
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        ul {
+            flex: 1;
             display: flex;
-            justify-content: center;
             align-items: stretch;
-
-
-            ul {
-                flex: 1;
-                display: flex;
-                align-items: stretch;
-                vertical-align: text-bottom;
-
-
-                li {
-                    margin-right: 5px;
-                    display: flex;
-                    align-items: center;
-                    flex-basis: content;
-                    padding: 10px;
-
-                }
-            }
-        }
-
-        .secondary-nav {
-            background: black;
-            color: gray;
-            font-size: .8em;
-            font-family: Arial, Helvetica, sans-serif;
-            height: 35px;
-
-            li:hover {
-                color: white;
-            }
-
-            li:nth-child(6) {
-                margin-right: auto;
-            }
-        }
-
-        .main-nav {
-            background: white;
-            height: 50px;
-            color: gray;
+            vertical-align: text-bottom;
+            margin-left: 110px;
 
 
             li {
-                text-transform: uppercase;
-
-                &:hover {
-                    color: black;
-                }
-            }
-
-
-            li:nth-of-type(5) {
-                flex: 1;
-                margin-right: auto;
-                border-right: 2px solid whitesmoke;
+                margin-right: 5px;
+                display: flex;
+                align-items: center;
+                flex-basis: content;
+                padding: 5px;
 
             }
+        }
 
+        
+    }
 
+    .secondary-nav {
+        background: black;
+        color: gray;
+        font-size: .8em;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 35px;
+
+        li:hover {
+            color: white;
+        }
+
+        li:nth-child(6) {
+            margin-right: auto;
         }
     }
+
+    .main-nav {
+        background: white;
+        height: 50px;
+        color: gray;
+
+
+        li {
+            text-transform: uppercase;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+
+        li:nth-of-type(5) {
+            flex: 1;
+            margin-right: auto;
+        }
+
+        li:last-of-type {
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            
+            border-left: 2px solid whitesmoke;
+        }
+
+    }
+
+   
 }
+
 
 section {
     margin: 20px 30px 50px 30px;
@@ -236,12 +264,68 @@ section {
     .article {
         margin: 5px;
         background: pink;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        padding: 15px;
+        background-size: cover;
+        background-position: center;
 
+        h1 {
+            margin-bottom: 5px;
+            font-weight: 600;
+            margin-right: 10%;
+            color: white;
+
+
+            &::before {
+                content: 'Most Popular';
+                position: absolute;
+                bottom: 115%;
+                text-transform: uppercase;
+                font-size: .7em;
+            }
+        }
+
+        p {
+            color: rgb(185, 189, 192);
+            font-size: 12px;
+        }
     }
+
 
     .article:first-of-type {
         grid-row: 1 / span 2;
 
+    }
+
+    .art-1 {
+        font-size: 3em;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+
+
+    }
+
+    .art-3 {
+        font-size: 1.5em;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F01%2FSnag_291393cb.png&signature=76313689ea06cb65768424336b7b7960");
+        background-size: cover;
+
+    }
+
+    .art-2 {
+        font-size: 1.5em;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)),
+            url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/11/Copy-of-...-1.png");
+        background-size: cover;
     }
 }
 
@@ -708,19 +792,46 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
-    body{
-        overflow-x:hidden;
+    body {
+        overflow-x: hidden;
     }
+
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+
+        .nav.secondary-nav {
+            display: none;
+        }
+
+        .nav.main-nav {
+            ul li {
+                display: none;
+            }
+        }
+
+
+    }
+
+
+    
 
     section {
         margin: 20px 15px 30px 15px;
+        position: relative;
+        top: 50px;
     }
 
-    .secondary-nav {
-        display: none;
+    .hero .article {
+        h1 {
+            font-size: 20px;
+        }
     }
 
     .hero {
+        position: relative;
+        top: 50px;
         display: flex;
         flex-direction: column;
         height: 90vh;
@@ -787,6 +898,8 @@ footer {
     }
 
     footer {
+        position: relative;
+        top: 50px;
         .copyright {
             flex-flow: column;
 
@@ -795,5 +908,7 @@ footer {
             }
         }
     }
+
+
 
 }
