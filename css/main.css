@@ -170,7 +170,7 @@ table {
   background-size: 70%, 100%;
 }
 
-.main-header:hover:before {
+.main-header:before:hover {
   background: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg"), url("https://media3.giphy.com/media/12pWOEeKbbfdio/200.webp?cid=790b7611c56367350b9d7c709e5dbaef676eb506d25cbebe&rid=200.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -236,6 +236,7 @@ table {
 .main-header .main-nav {
   background: white;
   height: 50px;
+  font-size: .8em;
   color: gray;
 }
 
@@ -264,7 +265,12 @@ table {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  font-size: 1.25em;
   border-left: 2px solid whitesmoke;
+}
+
+.main-header .nav-mobile {
+  display: none;
 }
 
 section {
@@ -881,8 +887,35 @@ footer .copyright span {
   .main-header .nav.secondary-nav {
     display: none;
   }
-  .main-header .nav.main-nav ul li {
+  .main-header .nav.main-nav {
     display: none;
+  }
+  .main-header .nav-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+    background: white;
+    width: 100%;
+    z-index: 99;
+  }
+  .main-header .nav-mobile ul li {
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+    font-size: 1.25em;
+    color: #c4c2c2;
+    padding: 0 15px;
+    border-left: 1px solid whitesmoke;
+  }
+  .main-header .nav-mobile ul li:last-of-type {
+    color: #ff4422;
   }
   section {
     margin: 20px 15px 30px 15px;
