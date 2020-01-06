@@ -170,14 +170,6 @@ table {
   background-size: 70%, 100%;
 }
 
-.main-header:before:hover {
-  background: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg"), url("https://media3.giphy.com/media/12pWOEeKbbfdio/200.webp?cid=790b7611c56367350b9d7c709e5dbaef676eb506d25cbebe&rid=200.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70%, 100%;
-}
-
 .main-header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
