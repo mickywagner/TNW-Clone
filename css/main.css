@@ -309,6 +309,15 @@ section {
   position: relative;
 }
 
+.hero .article h1:before {
+  content: 'Tech';
+  position: absolute;
+  bottom: 102%;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 100;
+}
+
 .hero .article p {
   color: #b9bdc0;
   font-size: 12px;
@@ -334,6 +343,10 @@ section {
   background-size: cover;
 }
 
+.hero .art-3 h1:before {
+  content: 'Gear';
+}
+
 .hero .art-2 {
   font-size: 1.5em;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/11/Copy-of-...-1.png");
@@ -351,7 +364,7 @@ section {
   position: relative;
 }
 
-.latest-news::before {
+.latest-news:before {
   content: "Latest news > ";
   vertical-align: middle;
   color: #ff4422;
@@ -362,7 +375,7 @@ section {
   top: -50px;
 }
 
-.latest-news::before:hover {
+.latest-news:before:hover {
   color: black;
 }
 
@@ -441,21 +454,30 @@ section {
 }
 
 .latest-funding .fund {
-  background: floralwhite;
+  background: #f7f4ee;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .latest-funding .fund h1 {
   background: #ff4422;
   color: white;
   font-size: 1.1em;
-  padding: 12px 15px;
+  padding: 12px 20px 12px 80px;
   font-weight: 600;
+}
+
+.latest-funding .fund img {
+  position: absolute;
+  width: 60px;
+  top: 10px;
+  left: 10px;
 }
 
 .latest-funding .fund h2 {
   background: mistyrose;
-  padding: 15px;
+  padding: 10px 20px 12px 80px;
+  color: black;
   font-weight: 600;
 }
 
@@ -816,7 +838,7 @@ footer .copyright img {
 }
 
 footer .copyright span {
-  color: red;
+  color: #ff4422;
 }
 
 /*************************************************
@@ -969,6 +991,36 @@ footer .copyright span {
 @media only screen and (min-width: 1025px) {
   section {
     margin: 20px 50px 50px 50px;
+  }
+  .main-header:before {
+    content: '';
+    display: none;
+  }
+  .main-header .nav ul {
+    margin-left: 10px;
+  }
+  .hero .art-1 {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(15%, rgba(253, 38, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.5))), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+    background-image: linear-gradient(to bottom right, rgba(253, 38, 0, 0.9) 15%, rgba(0, 0, 0, 0.5) 75%), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+  }
+  .hero .art-1:before {
+    content: "";
+    width: 500px;
+    height: 100px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    background: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg");
+    background-repeat: no-repeat;
+  }
+  .hero .art-1:after {
+    content: "Sunday –– September 22, 3021";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
   }
   .latest-funding {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;

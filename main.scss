@@ -168,6 +168,7 @@ $red: rgb(255, 68, 34);
         background-position: center;
         background-size: 70%, 100%;  
     }
+
     &:hover:before {
         background: 
         url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg"),
@@ -176,7 +177,6 @@ $red: rgb(255, 68, 34);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 70%, 100%;  
-        
     }
 
     .nav {
@@ -288,6 +288,15 @@ section {
             color: white;
             position: relative;
 
+            &:before {
+                content: 'Tech';
+                position: absolute;
+                bottom: 102%;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 100;
+                
+            }
         }
 
         p {
@@ -320,6 +329,12 @@ section {
             url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F01%2FSnag_291393cb.png&signature=76313689ea06cb65768424336b7b7960");
         background-size: cover;
 
+        h1 {
+            &:before {
+                content: 'Gear';
+            }
+        }
+
     }
 
     .art-2 {
@@ -340,7 +355,7 @@ section {
     position: relative;
 
 
-    &::before {
+    &:before {
         content: "Latest news > ";
         vertical-align: middle;
         color: $red;
@@ -425,20 +440,29 @@ section {
 
 
     .fund {
-        background: floralwhite;
+        background: rgb(247, 244, 238);
         margin-bottom: 20px;
+        position: relative;
 
         h1 {
             background: $red;
             color: white;
             font-size: 1.1em;
-            padding: 12px 15px;
+            padding: 12px 20px 12px 80px;
             font-weight: 600;
+        }
+
+        img {
+            position: absolute;
+            width: 60px;
+            top: 10px;
+            left: 10px;
         }
 
         h2 {
             background: mistyrose;
-            padding: 15px;
+            padding: 10px 20px 12px 80px;
+            color: black;
             font-weight: 600;
 
             span {
@@ -813,7 +837,7 @@ footer {
         }
 
         span {
-            color: red;
+            color: $red;
         }
     }
 
@@ -974,6 +998,48 @@ footer {
     section {
         margin: 20px 50px 50px 50px;
     }
+
+    .main-header {
+        &:before {
+            content: '';
+            display: none;
+        }
+
+        .nav {
+            ul {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .hero {
+        .art-1 {
+            position: relative;
+            background-image: 
+                linear-gradient(to bottom right, rgba(253, 38, 0, 0.9) 15%, rgba(0, 0, 0, 0.5) 75%),
+                url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/12/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-6-796x417.png");
+            
+            &:before {
+                content: "";
+                width: 500px;
+                height: 100px;
+                color: white;
+                position: absolute;
+                top: 15px;
+                background: url("https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg");
+                background-repeat: no-repeat;
+            }
+
+            &:after {
+                content: "Sunday –– September 22, 3021";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 14px;
+                color: white;
+            }
+        }
+    } 
 
     .latest-funding {
         grid-template-columns: 1fr 1fr 1fr 1fr;
