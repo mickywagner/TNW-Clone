@@ -7,6 +7,7 @@
     <td><img src="/README_images/mobile.png" width="200"></td>
     <td> <img src="/README_images/mobile2.png" width="200"></td>
     <td><img src="/README_images/mobile3.png" width="200"></td>
+    <td><img src="/README_images/mobile4.png" width="200"></td>
   </tr>
 </table>
 
