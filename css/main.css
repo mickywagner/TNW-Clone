@@ -141,6 +141,7 @@ table {
 **************************************************/
 .page {
   background: whitesmoke;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,6 +518,7 @@ section {
 
 .category-articles .category {
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .category-articles .category h1 {
@@ -774,6 +776,7 @@ images
 .category-articles .category .img {
   background-size: cover;
   background-position: center;
+  margin-bottom: 10px;
 }
 
 /* 
@@ -968,6 +971,10 @@ footer .copyright span {
   }
   .category .img {
     height: 350px;
+  }
+  .category-articles .category {
+    margin-bottom: 10px;
+    margin-right: 10px;
   }
   .latest-deals {
     display: -webkit-box;
