@@ -1,9 +1,14 @@
 # The Next Web - TNW - Clone
 <h3>Screenshots</h3>
 <img src="/README_images/Main.png">
-<img src="/README_images/mobile.png" width="200">
-<img src="/README_images/mobile2.png" width="200">
-<img src="/README_images/mobile3.png" width="200">
+
+<table>
+  <tr>
+    <td><img src="/README_images/mobile.png" width="200"></td>
+    <td> <img src="/README_images/mobile2.png" width="200"></td>
+    <td><img src="/README_images/mobile3.png" width="200"></td>
+  </tr>
+</table>
 
 <h3>About This Project</h3>
 <p>This is a HTML/CSS clone of the TNW website that I made for the HTML/CSS course on <a href="https://www.theodinproject.com/">Odin Project</a>. It was all about 
