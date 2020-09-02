@@ -21,8 +21,10 @@ implementing responsive design. For this I used SASS and CSS Grid and Flexbox to
 
 <h3>Technical Sheet</h3>
 
+<strong>
 <ul>
   <li>HTML 5</li>
   <li>CSS 3 - FlexBox & Grid</li>
   <li>SASS</li>
 </ul>
+</strong>
